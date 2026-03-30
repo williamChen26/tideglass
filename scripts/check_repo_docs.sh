@@ -15,7 +15,7 @@ required_files=(
   "docs/exec-plans/tech-debt-tracker.md"
   "docs/generated/README.md"
   "docs/product-specs/index.md"
-  "docs/product-specs/repository-bootstrap.md"
+  "docs/product-specs/tideglass-rss-reader.md"
   "docs/references/index.md"
   "docs/DESIGN.md"
   "docs/FRONTEND.md"
@@ -46,8 +46,8 @@ if ! grep -q "AGENTS.md" README.md; then
   missing=1
 fi
 
-if ! grep -q "repository-bootstrap.md" docs/product-specs/index.md; then
-  echo "product spec index must reference repository-bootstrap.md"
+if ! grep -q "tideglass-rss-reader.md" docs/product-specs/index.md; then
+  echo "product spec index must reference tideglass-rss-reader.md"
   missing=1
 fi
 
@@ -61,4 +61,3 @@ if [[ "$missing" -ne 0 ]]; then
 fi
 
 echo "repository documentation checks passed"
-

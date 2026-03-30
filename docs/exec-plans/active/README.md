@@ -8,5 +8,4 @@
 
 例如：
 
-`2026-03-30-repository-bootstrap.md`
-
+`2026-03-30-tideglass-bootstrap.md`
