@@ -24,11 +24,36 @@
 - 小改动可以直接做；复杂改动先写执行计划。
 - 不要把关键知识只放在 PR 描述、聊天或脑海里。
 
+## Harness 编排系统 (Ralph Loop)
+
+本仓库配备 sprint-based 三智能体 harness 编排系统。
+
+### 入口命令
+
+| 命令 | 作用 |
+|------|------|
+| `/harness <需求>` | 完整 ralph loop |
+| `/planner <需求>` | 仅规划，生成 spec |
+| `/generator contract/build <run-id>` | 提合同 / 实现 sprint |
+| `/evaluator contract/sprint <run-id>` | 审合同 / 验收 sprint |
+
+### 智能体定义
+
+| Agent | 文件 | 职责 |
+|-------|------|------|
+| Planner | `.claude/agents/planner.md` | 需求 → 大蓝图 spec (feature list + AC) |
+| Generator | `.claude/agents/generator.md` | 提 sprint 合同 + TDD 实现 |
+| Evaluator | `.claude/agents/evaluator.md` | 审合同 + 硬阈值质量验收 |
+
+### 运行状态
+
+Sprint 运行状态存储在 `docs/exec-plans/active/<run-id>/`，详见 `docs/exec-plans/index.md`。
+
 ## 仓库地图
 
 - `docs/design-docs/`: 核心理念、设计决策、验证状态。
 - `docs/product-specs/`: 用户问题、范围、验收标准。
-- `docs/exec-plans/active/`: 正在执行的计划。
+- `docs/exec-plans/active/`: 正在执行的计划和 sprint 运行。
 - `docs/exec-plans/completed/`: 已完成计划与复盘。
 - `docs/exec-plans/tech-debt-tracker.md`: 技术债登记。
 - `docs/generated/`: 由工具生成、但值得版本化的资料。
@@ -47,4 +72,3 @@
 - 优先显式边界，而不是隐式耦合。
 - 优先可组合、可测试、可检查的实现。
 - 优先未来智能体也能快速接手的产物。
-

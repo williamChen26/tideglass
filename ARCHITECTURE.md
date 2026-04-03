@@ -38,6 +38,18 @@ src/
 4. 边界输入输出要做显式校验，不依赖“猜测的数据形状”。
 5. 当文档约束被频繁违反时，应优先把它转成 lint、测试或脚本。
 
+## Harness 编排层 (Ralph Loop)
+
+本仓库使用 sprint-based 三智能体 harness 架构，采用 ralph loop 模式：
+
+- **Planner** (Opus): 需求 → 大蓝图 spec (feature list + AC)
+- **Generator** (Sonnet): 逐个 pick feature → 提 sprint 合同 → TDD 实现
+- **Evaluator** (Opus): 审合同 → 硬阈值验收 → 通过才进入下一个 sprint
+
+状态通过文件交接写入 `docs/exec-plans/`，每个智能体独立上下文，支持 context reset。
+
+详见 `docs/design-docs/harness-architecture.md`。
+
 ## 文档即控制面
 
 这个仓库把以下内容视为一等工件：

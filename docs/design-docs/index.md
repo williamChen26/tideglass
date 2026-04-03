@@ -4,7 +4,8 @@
 
 ## 当前文档
 
-- [`docs/design-docs/core-beliefs.md`](core-beliefs.md): 仓库的核心信念。
+- [`core-beliefs.md`](core-beliefs.md): 仓库的核心信念。
+- [`harness-architecture.md`](harness-architecture.md): Harness 多智能体编排架构设计。
 
 ## 约定
 
