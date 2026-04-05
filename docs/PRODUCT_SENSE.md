@@ -29,12 +29,4 @@ product-specs/ (长期产品方向)
   sprint contract.md (每个 sprint 的"完成"标准, Generator 提出 + Evaluator 审定)
 ```
 
-## Tideglass 产品方向
-
-Tideglass 定位为 RSS 订阅与沉浸式阅读应用，目标体验接近 Reader 一类产品：
-
-- 订阅稳定
-- 整理轻量
-- 阅读沉浸
-
-详见 [`product-specs/tideglass-rss-reader.md`](product-specs/tideglass-rss-reader.md)。
+## 产品方向
